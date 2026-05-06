@@ -1,5 +1,5 @@
 /* ============================================
-   NEONPLAY — Estilo neon retro
+   AL.PLAY — Estilo neon retro
    Paleta: dark base + neons (magenta, ciano, amarelo)
    ============================================ */
 
@@ -745,4 +745,37 @@ body {
     line-height: 1.4;
     font-style: italic;
     letter-spacing: 1px;
+}
+
+/* ============================================
+   PÁGINA DE DETALHES — TRAILER
+   ============================================ */
+
+.detail-trailer {
+    background: var(--bg-deep);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Moldura neon à volta do vídeo */
+.trailer-frame {
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    background: var(--bg-card);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2),
+        0 10px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.trailer-frame:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.4),
+        0 10px 50px rgba(0, 0, 0, 0.6);
+}
+
+.trailer-frame iframe {
+    border-radius: 6px;
+    display: block;
 }
