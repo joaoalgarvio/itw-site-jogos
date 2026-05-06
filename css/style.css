@@ -1,8 +1,317 @@
 /* ============================================
-   PÁGINA DE AUTOR
+   NEONPLAY — Estilo neon retro
+   Paleta: dark base + neons (magenta, ciano, amarelo)
    ============================================ */
 
-/* Cabeçalho da página (reutilizável noutras páginas) */
+/* Variáveis CSS — mudas aqui e muda em todo o site */
+:root {
+    --bg-deep: #0a0e27;
+    --bg-card: #1a1147;
+    --neon-pink: #ff2cdf;
+    --neon-cyan: #00f0ff;
+    --neon-yellow: #fff200;
+    --text-main: #f0f0f0;
+    --text-soft: #7a7299;
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+    --font-arcade: 'Press Start 2P', monospace;
+}
+
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+    background-color: rgba(10, 14, 39, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.logo-neon {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.logo-accent {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-main) !important;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--neon-cyan) !important;
+    text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* ============================================
+   HERO / BANNER (index)
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-deep) 0%, #1a1147 100%);
+}
+
+.hero-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image:
+        linear-gradient(rgba(255, 44, 223, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(400px) rotateX(60deg);
+    transform-origin: center bottom;
+    opacity: 0.6;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 7rem);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.accent-pink {
+    color: var(--neon-pink);
+    text-shadow: 0 0 20px var(--neon-pink);
+}
+
+.accent-cyan {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px var(--neon-cyan);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-soft);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão neon */
+.btn-neon {
+    display: inline-block;
+    background: transparent;
+    color: var(--neon-pink);
+    border: 2px solid var(--neon-pink);
+    padding: 0.9rem 2.5rem;
+    font-family: var(--font-title);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 44, 223, 0.4),
+        inset 0 0 15px rgba(255, 44, 223, 0.1);
+}
+
+.btn-neon:hover {
+    background: var(--neon-pink);
+    color: var(--bg-deep);
+    box-shadow: 0 0 30px var(--neon-pink),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   LISTAGEM DE JOGOS (index)
+   ============================================ */
+.section-title {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.game-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.game-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3),
+        0 0 20px rgba(255, 44, 223, 0.2);
+}
+
+.game-card-img {
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    background-color: #2a1f5f;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.game-card-body {
+    padding: 1.5rem;
+}
+
+.game-tag {
+    display: inline-block;
+    font-family: var(--font-arcade);
+    font-size: 0.65rem;
+    color: var(--neon-yellow);
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.game-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-main);
+}
+
+.game-desc {
+    color: var(--text-soft);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+    background: #050818;
+    border-top: 1px solid rgba(0, 240, 255, 0.15);
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-title {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-text {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--neon-cyan);
+}
+
+.footer-divider {
+    border-color: rgba(0, 240, 255, 0.1);
+    margin: 2rem 0 1rem;
+}
+
+.footer-copy {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-title {
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .game-card-img {
+        height: 220px;
+    }
+}
+
+/* ============================================
+   PÁGINA DE AUTOR
+   ============================================ */
 .page-header {
     padding: 130px 0 60px;
     text-align: center;
@@ -25,12 +334,10 @@
     letter-spacing: 1px;
 }
 
-/* Secção do autor */
 .author-section {
     padding: 4rem 0;
 }
 
-/* Cartão do autor — estilo "ficha de personagem de jogo" */
 .author-card {
     background: var(--bg-card);
     border: 1px solid rgba(0, 240, 255, 0.2);
@@ -48,7 +355,6 @@
     }
 }
 
-/* Foto / placeholder */
 .author-photo {
     flex: 0 0 280px;
     background: linear-gradient(135deg, #2a1f5f 0%, #1a1147 100%);
@@ -87,7 +393,6 @@
     text-shadow: 0 0 10px var(--neon-pink);
 }
 
-/* Info do autor */
 .author-info {
     flex: 1;
     padding: 2rem;
@@ -111,7 +416,6 @@
     line-height: 1.2;
 }
 
-/* Lista de dados — estilo "stats de jogo" */
 .author-data {
     list-style: none;
     padding: 0;
@@ -145,7 +449,6 @@
     text-align: right;
 }
 
-/* Email */
 .author-contact {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -176,4 +479,214 @@
 
 .email-icon {
     font-size: 1.2rem;
+}
+
+/* ============================================
+   PÁGINA DE DETALHES — HEADER
+   ============================================ */
+.detail-header {
+    position: relative;
+    padding: 140px 0 70px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.detail-header-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255, 44, 223, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 240, 255, 0.2) 0%, transparent 50%),
+        linear-gradient(180deg, var(--bg-deep) 0%, #1a1147 100%);
+    z-index: 0;
+}
+
+.detail-header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb-nav {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+}
+
+.breadcrumb-nav a {
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--neon-cyan);
+}
+
+.breadcrumb-sep {
+    margin: 0 0.5rem;
+    color: var(--neon-pink);
+}
+
+.breadcrumb-current {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.detail-tag {
+    display: inline-block;
+    font-family: var(--font-arcade);
+    font-size: 0.75rem;
+    color: var(--neon-yellow);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 242, 0, 0.4);
+}
+
+.detail-title {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    letter-spacing: 3px;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.detail-tagline {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-soft);
+    max-width: 600px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* ============================================
+   PÁGINA DE DETALHES — SECÇÃO PRINCIPAL
+   ============================================ */
+.detail-main {
+    background: var(--bg-deep);
+}
+
+.detail-image-wrap {
+    position: relative;
+    background: linear-gradient(135deg, #1a1147 0%, #0a0e27 100%);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.detail-image {
+    max-width: 100%;
+    max-height: 360px;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.4));
+}
+
+.detail-image-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(10, 14, 39, 0.92);
+    color: var(--neon-yellow);
+    border: 1px solid var(--neon-yellow);
+    font-family: var(--font-arcade);
+    font-size: 0.6rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+    z-index: 2;
+    box-shadow: 0 0 12px rgba(255, 242, 0, 0.4);
+    text-shadow: 0 0 6px rgba(255, 242, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.detail-info {
+    padding: 1rem 0;
+}
+
+.detail-stats {
+    list-style: none;
+    margin: 0 0 2rem 0;
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+}
+
+.detail-stats li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px dashed rgba(0, 240, 255, 0.12);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.detail-stats li:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    font-family: var(--font-arcade);
+    font-size: 0.65rem;
+    color: var(--text-soft);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.detail-summary {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.detail-summary strong {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.detail-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-neon-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    padding: 0.9rem 2rem;
+    font-family: var(--font-title);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3),
+        inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.btn-neon-outline:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-deep);
+    box-shadow: 0 0 25px var(--neon-cyan);
 }

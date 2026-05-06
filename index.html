@@ -1,124 +1,228 @@
-<!-- 1 — Super Mario Bros. -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/mario.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">Super Mario Bros.</h3>
-                <p class="game-desc">O canalizador de bigode que definiu o género de plataformas e moldou a Nintendo.
-                </p>
-            </div>
-        </article>
-    </a>
-</div>
+<!DOCTYPE html>
+<html lang="pt">
 
-<!-- 2 — The Legend of Zelda -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/zelda.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">The Legend of Zelda</h3>
-                <p class="game-desc">Hyrule, Link e o eterno combate contra Ganon — a saga que reinventou a aventura.
-                </p>
-            </div>
-        </article>
-    </a>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEONPLAY — Jogos clássicos, paixão eterna</title>
 
-<!-- 3 — EA Sports FC (FIFA) -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/fifa.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">EA Sports FC</h3>
-                <p class="game-desc">A franquia que durante 30 anos foi FIFA. Continua o trono indiscutível do futebol
-                    virtual.</p>
-            </div>
-        </article>
-    </a>
-</div>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- 4 — Mortal Kombat -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/mortalkombat.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">Mortal Kombat</h3>
-                <p class="game-desc">Brutalidade, sangue e fatalities. O rei sombrio dos jogos de luta.</p>
-            </div>
-        </article>
-    </a>
-</div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<!-- 5 — Age of Empires -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/ageofempires.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">Age of Empires II</h3>
-                <p class="game-desc">Construir civilizações, dominar impérios. O RTS que ensinou estratégia a uma
-                    geração.</p>
-            </div>
-        </article>
-    </a>
-</div>
+    <!-- O nosso CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-<!-- 6 — League of Legends -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/lol.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">League of Legends</h3>
-                <p class="game-desc">Cinco contra cinco, mapas estratégicos e fenómeno mundial dos e-sports. Gratuito e
-                    eterno.</p>
-            </div>
-        </article>
-    </a>
-</div>
+<body>
 
-<!-- 7 — Grand Theft Auto -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/gta.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">Grand Theft Auto</h3>
-                <p class="game-desc">Crime, liberdade e mundos abertos como ninguém faz. A franquia mais vendida da
-                    história.</p>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-neon">NEON</span><span class="logo-accent">PLAY</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#listagem">Jogos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="autores.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+                </ul>
             </div>
-        </article>
-    </a>
-</div>
+        </div>
+    </nav>
 
-<!-- 8 — Minecraft -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/minecraft.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">Minecraft</h3>
-                <p class="game-desc">Cubos, criatividade infinita e o jogo mais vendido de sempre. Constrói o teu mundo.
-                </p>
-            </div>
-        </article>
-    </a>
-</div>
+    <!-- ========== HERO / BANNER ========== -->
+    <header class="hero">
+        <div class="hero-grid"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">PRESS <span class="accent-pink">START</span></h1>
+            <p class="hero-subtitle">Onde os clássicos nunca morrem.<br>Da arcade dos anos 80 às consolas de hoje.</p>
+            <a href="#listagem" class="btn btn-neon">EXPLORAR JOGOS</a>
+        </div>
+    </header>
 
-<!-- 9 — Pokémon -->
-<div class="col-12 col-md-6 col-lg-4">
-    <a href="detalhes.html" class="game-card-link">
-        <article class="game-card">
-            <div class="game-card-img" style="background-image: url('img/jogos/pokemon.jpg');"></div>
-            <div class="game-card-body">
-                <h3 class="game-title">Pokémon</h3>
-                <p class="game-desc">Apanhá-los todos. A franquia multimédia mais valiosa do mundo, ainda mais forte
-                    hoje.</p>
+    <!-- ========== LISTAGEM DE JOGOS ========== -->
+    <section id="listagem" class="game-list py-5">
+        <div class="container">
+            <h2 class="section-title">JOGOS EM <span class="accent-cyan">DESTAQUE</span></h2>
+            <p class="section-subtitle">Franquias que atravessaram décadas</p>
+
+            <div class="row g-4 mt-4">
+
+                <!-- 1 — Super Mario Bros. -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/mario.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">Super Mario Bros.</h3>
+                                <p class="game-desc">O canalizador de bigode que definiu o género de plataformas e
+                                    moldou a Nintendo.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 2 — The Legend of Zelda -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/zelda.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">The Legend of Zelda</h3>
+                                <p class="game-desc">Hyrule, Link e o eterno combate contra Ganon — a saga que
+                                    reinventou a aventura.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 3 — EA Sports FC (FIFA) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/fifa.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">EA Sports FC</h3>
+                                <p class="game-desc">A franquia que durante 30 anos foi FIFA. Continua o trono
+                                    indiscutível do futebol virtual.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 4 — Mortal Kombat -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/mortalkombat.jpg');">
+                            </div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">Mortal Kombat</h3>
+                                <p class="game-desc">Brutalidade, sangue e fatalities. O rei sombrio dos jogos de luta.
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 5 — Age of Empires II -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/ageofempires.jpg');">
+                            </div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">Age of Empires II</h3>
+                                <p class="game-desc">Construir civilizações, dominar impérios. O RTS que ensinou
+                                    estratégia a uma geração.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 6 — League of Legends -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/lol.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">League of Legends</h3>
+                                <p class="game-desc">Cinco contra cinco, mapas estratégicos e fenómeno mundial dos
+                                    e-sports. Gratuito e eterno.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 7 — Grand Theft Auto -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/gta.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">Grand Theft Auto</h3>
+                                <p class="game-desc">Crime, liberdade e mundos abertos como ninguém faz. A franquia mais
+                                    vendida da história.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 8 — Minecraft -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/minecraft.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">Minecraft</h3>
+                                <p class="game-desc">Cubos, criatividade infinita e o jogo mais vendido de sempre.
+                                    Constrói o teu mundo.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- 9 — Pokémon -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="detalhes.html" class="game-card-link">
+                        <article class="game-card">
+                            <div class="game-card-img" style="background-image: url('img/jogos/pokemon.jpg');"></div>
+                            <div class="game-card-body">
+                                <h3 class="game-title">Pokémon</h3>
+                                <p class="game-desc">Apanhá-los todos. A franquia multimédia mais valiosa do mundo,
+                                    ainda mais forte hoje.</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
             </div>
-        </article>
-    </a>
-</div>
+        </div>
+    </section>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-title"><span class="logo-neon">NEON</span><span class="logo-accent">PLAY</span>
+                    </h4>
+                    <p class="footer-text">A história dos videojogos contada através das suas franquias mais lendárias.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#listagem">Jogos</a></li>
+                        <li><a href="autores.html">Sobre</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">Segue-nos</h4>
+                    <p class="footer-text">Links para redes sociais (vão para a página de contactos).</p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copy">© 2026 NEONPLAY · Trabalho académico ITW · IPCB-EST</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
