@@ -690,3 +690,59 @@ body {
     color: var(--bg-deep);
     box-shadow: 0 0 25px var(--neon-cyan);
 }
+
+/* ============================================
+   PÁGINA DE DETALHES — DESCRIÇÃO LONGA
+   ============================================ */
+
+.detail-description {
+    background: linear-gradient(180deg, var(--bg-deep) 0%, #0f1238 100%);
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.description-title {
+    font-family: var(--font-title);
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.description-text {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.description-text strong {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+    font-weight: 700;
+}
+
+.description-text em {
+    color: var(--neon-pink);
+    font-style: italic;
+}
+
+/* Citação destacada */
+.description-quote {
+    font-family: var(--font-title);
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 500;
+    color: var(--neon-pink);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 2.5rem 0;
+    border-top: 1px solid rgba(255, 44, 223, 0.3);
+    border-bottom: 1px solid rgba(255, 44, 223, 0.3);
+    text-shadow: 0 0 15px rgba(255, 44, 223, 0.4);
+    line-height: 1.4;
+    font-style: italic;
+    letter-spacing: 1px;
+}
