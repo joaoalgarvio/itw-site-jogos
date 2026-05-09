@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos — AL.PLAY</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (para os ícones das redes sociais) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- O nosso CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR / MENU PRINCIPAL ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-neon">AL.</span><span class="logo-accent">PLAY</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#listagem">Jogos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="autores.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CABEÇALHO DA PÁGINA ========== -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="page-title">FALA <span class="accent-pink">CONNOSCO</span></h1>
+            <p class="page-subtitle">Tens uma sugestão? Um jogo que devíamos cobrir? Diz-nos.</p>
+        </div>
+    </section>
+
+    <!-- ========== FORMULÁRIO + INFO ========== -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- COLUNA ESQUERDA — formulário -->
+                <div class="col-lg-7">
+                    <div class="contact-form-wrap">
+                        <h2 class="contact-block-title">ENVIAR <span class="accent-cyan">MENSAGEM</span></h2>
+
+                        <form class="contact-form" novalidate>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" placeholder="O teu nome" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="assunto" class="form-label">Assunto</label>
+                                <select class="form-select" id="assunto">
+                                    <option selected>Sugestão de jogo</option>
+                                    <option>Reportar erro no site</option>
+                                    <option>Parceria / Colaboração</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" rows="5"
+                                    placeholder="Escreve a tua mensagem aqui..." required></textarea>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="aceitarTermos">
+                                <label class="form-check-label" for="aceitarTermos">
+                                    Aceito os termos de privacidade e o tratamento dos meus dados.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-neon">ENVIAR MENSAGEM</button>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- COLUNA DIREITA — info contactos + redes sociais -->
+                <div class="col-lg-5">
+                    <div class="contact-info-wrap">
+
+                        <h2 class="contact-block-title">INFO <span class="accent-cyan">DE CONTACTO</span></h2>
+
+                        <ul class="contact-info-list">
+                            <li>
+                                <i class="bi bi-envelope-fill contact-icon"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:joaoalgarvio@outlook.com"
+                                        class="contact-value">joaoalgarvio@outlook.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-geo-alt-fill contact-icon"></i>
+                                <div>
+                                    <span class="contact-label">Localização</span>
+                                    <span class="contact-value">Castelo Branco, Portugal</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-mortarboard-fill contact-icon"></i>
+                                <div>
+                                    <span class="contact-label">Instituição</span>
+                                    <span class="contact-value">IPCB · Escola Superior de Tecnologia</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Menu secundário com ícones (cumpre requisito do enunciado) -->
+                        <h3 class="contact-block-subtitle">SEGUE-NOS</h3>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                                    aria-label="Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/joaoalgarvio" target="_blank" rel="noopener"
+                                    aria-label="GitHub">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MAPA ========== -->
+    <section class="contact-map-section">
+        <div class="container-fluid p-0">
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6129.058044745096!2d-7.5092048!3d39.8175552!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d5ea6bb2280e1%3A0x1c460157bc4b46c8!2sEscola%20Superior%20de%20Tecnologia%20-%20Instituto%20Polit%C3%A9cnico%20de%20Castelo%20Branco!5e0!3m2!1spt-PT!2spt!4v1778368904006!5m2!1spt-PT!2spt"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Localização — IPCB Escola Superior de Tecnologia">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-title"><span class="logo-neon">AL.</span><span class="logo-accent">PLAY</span>
+                    </h4>
+                    <p class="footer-text">A história dos videojogos contada através das suas franquias mais lendárias.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#listagem">Jogos</a></li>
+                        <li><a href="autores.html">Sobre</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">Segue-nos</h4>
+                    <p class="footer-text">Links nas redes sociais nesta página.</p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copy">© 2026 AL.PLAY · Trabalho académico ITW · IPCB-EST</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
