@@ -779,3 +779,14 @@ body {
     border-radius: 6px;
     display: block;
 }
+
+/* Vídeo LOL */
+.trailer-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    background: #000;
+}
+
+
