@@ -1050,3 +1050,98 @@ a.contact-value:hover {
     /* Filtro para o mapa ficar com aspeto neon/escuro */
     filter: invert(0.92) hue-rotate(180deg) saturate(1.3);
 }
+/* ============================================
+   PÁGINA DE DETALHES — BANDA SONORA
+   ============================================ */
+
+.detail-soundtrack {
+    background: var(--bg-deep);
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.soundtrack-intro {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+.soundtrack-intro em {
+    color: var(--neon-pink);
+    font-style: italic;
+}
+
+/* Cartão da banda sonora */
+.soundtrack-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 44, 223, 0.1);
+}
+
+@media (min-width: 768px) {
+    .soundtrack-card {
+        flex-direction: row;
+    }
+}
+
+/* Capa */
+.soundtrack-cover {
+    flex: 0 0 220px;
+    background: linear-gradient(135deg, #2a1f5f 0%, #1a1147 100%);
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.soundtrack-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info + leitor */
+.soundtrack-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.soundtrack-tag {
+    display: inline-block;
+    font-family: var(--font-arcade);
+    font-size: 0.65rem;
+    color: var(--neon-yellow);
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+.soundtrack-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+    letter-spacing: 1px;
+}
+
+.soundtrack-artist {
+    color: var(--text-soft);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Leitor de áudio */
+.soundtrack-player {
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    /* Filtro para o leitor seguir a estética escura */
+    filter: invert(0.85) hue-rotate(180deg);
+}
