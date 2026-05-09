@@ -789,4 +789,63 @@ body {
     background: #000;
 }
 
+/* ============================================
+   PÁGINA DE DETALHES — GALERIA
+   ============================================ */
+
+.detail-gallery {
+    background: var(--bg-deep);
+    padding-top: 4rem;
+}
+
+/* Cada item da galeria */
+.gallery-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-card);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Caption sobre a imagem */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 39, 0.95) 100%);
+    color: var(--text-main);
+    font-family: var(--font-arcade);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
 
